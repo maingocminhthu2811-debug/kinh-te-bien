@@ -1,0 +1,6 @@
+{
+  "name": "Những Cửa Ngõ Vươn Ra Biển Lớn - Tầm Nhìn Đến 2030",
+  "description": "Hệ thống thông tin và bảng điều khiển tương tác về quy hoạch kết cấu hạ tầng cảng biển Việt Nam tầm nhìn đến 2030 theo Quyết định của Bộ Xây dựng.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
