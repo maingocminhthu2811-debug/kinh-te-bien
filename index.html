@@ -885,33 +885,16 @@
       border-color: #67e8f9;
     }
 
-    .center-hub-top {
-      font-size: 0.72rem;
-      font-weight: 700;
-      color: #7dd3fc;
-      text-transform: uppercase;
-      letter-spacing: 0.05em;
-      line-height: 1.1;
-      margin-bottom: 2px;
-    }
-
-    .center-hub-count {
-      font-size: 1.5rem;
+    .center-hub-all-text {
+      font-size: 1.15rem;
       font-weight: 800;
       color: #ffffff;
-      line-height: 1;
-      text-shadow: 0 0 10px rgba(56, 189, 248, 0.8);
-    }
-
-    .center-hub-label {
-      font-size: 0.68rem;
-      font-weight: 700;
-      color: #7dd3fc;
       text-transform: uppercase;
-      letter-spacing: 0.04em;
-      line-height: 1.1;
+      letter-spacing: 0.08em;
+      line-height: 1.2;
+      text-shadow: 0 0 12px rgba(56, 189, 248, 0.85);
       text-align: center;
-      margin-top: 2px;
+      user-select: none;
     }
 
     /* 4 Node trạm trên quỹ đạo (Arranged symmetrically like Screenshot 2) */
@@ -943,51 +926,45 @@
       .station-node-count {
         font-size: 1.15rem;
       }
-      .station-node-suffix {
+      .station-node-sub {
         font-size: 0.54rem;
       }
       .orbit-center-hub {
         width: 96px;
         height: 96px;
       }
-      .center-hub-top {
-        font-size: 0.64rem;
-      }
-      .center-hub-count {
-        font-size: 1.3rem;
-      }
-      .center-hub-label {
-        font-size: 0.62rem;
+      .center-hub-all-text {
+        font-size: 0.95rem;
       }
     }
 
-    /* Vị trí 4 trạm */
+    /* Vị trí & Nền 4 trạm đồng bộ phong cách Đại Dương nền xanh chữ trắng */
     .station-special {
       top: 4%;
       left: 10%;
-      background: linear-gradient(145deg, #2b1812, #180c09);
-      border: 2px solid rgba(249, 115, 22, 0.65);
+      background: radial-gradient(circle, #0e3768 0%, #061933 100%);
+      border: 2px solid rgba(249, 115, 22, 0.75);
     }
 
     .station-class1 {
       top: 4%;
       right: 10%;
-      background: linear-gradient(145deg, #0e274d, #07152d);
-      border: 2px solid rgba(59, 130, 246, 0.65);
+      background: radial-gradient(circle, #0e3768 0%, #061933 100%);
+      border: 2px solid rgba(59, 130, 246, 0.75);
     }
 
     .station-class2 {
       bottom: 4%;
       left: 10%;
-      background: linear-gradient(145deg, #2b0e1a, #18070e);
-      border: 2px solid rgba(244, 63, 94, 0.65);
+      background: radial-gradient(circle, #0e3768 0%, #061933 100%);
+      border: 2px solid rgba(244, 63, 94, 0.75);
     }
 
     .station-potential {
       bottom: 4%;
       right: 10%;
-      background: linear-gradient(145deg, #1c2609, #0f1604);
-      border: 2px solid rgba(132, 204, 22, 0.65);
+      background: radial-gradient(circle, #0e3768 0%, #061933 100%);
+      border: 2px solid rgba(132, 204, 22, 0.75);
     }
 
     .orbit-station-node:hover {
@@ -996,26 +973,68 @@
 
     .station-special:hover, .station-special.active {
       border-color: #fb923c;
-      box-shadow: 0 0 28px rgba(249, 115, 22, 0.7);
-      background: linear-gradient(145deg, #431f16, #24110c);
+      box-shadow: 0 0 28px rgba(249, 115, 22, 0.75);
+      background: radial-gradient(circle, #15457f 0%, #082142 100%);
     }
 
     .station-class1:hover, .station-class1.active {
       border-color: #60a5fa;
-      box-shadow: 0 0 28px rgba(59, 130, 246, 0.7);
-      background: linear-gradient(145deg, #183e78, #0c234a);
+      box-shadow: 0 0 28px rgba(59, 130, 246, 0.75);
+      background: radial-gradient(circle, #15457f 0%, #082142 100%);
     }
 
     .station-class2:hover, .station-class2.active {
       border-color: #fda4af;
-      box-shadow: 0 0 28px rgba(244, 63, 94, 0.7);
-      background: linear-gradient(145deg, #44162a, #230915);
+      box-shadow: 0 0 28px rgba(244, 63, 94, 0.75);
+      background: radial-gradient(circle, #15457f 0%, #082142 100%);
     }
 
     .station-potential:hover, .station-potential.active {
       border-color: #bef264;
-      box-shadow: 0 0 28px rgba(132, 204, 22, 0.7);
-      background: linear-gradient(145deg, #2d3f0d, #182406);
+      box-shadow: 0 0 28px rgba(132, 204, 22, 0.75);
+      background: radial-gradient(circle, #15457f 0%, #082142 100%);
+    }
+
+    .station-node-count {
+      font-size: 1.45rem;
+      font-weight: 800;
+      color: #ffffff;
+      line-height: 1;
+      margin-bottom: 2px;
+    }
+
+    .station-special .station-node-count {
+      text-shadow: 0 0 10px rgba(249, 115, 22, 0.85);
+    }
+    .station-class1 .station-node-count {
+      text-shadow: 0 0 10px rgba(59, 130, 246, 0.85);
+    }
+    .station-class2 .station-node-count {
+      text-shadow: 0 0 10px rgba(244, 63, 94, 0.85);
+    }
+    .station-potential .station-node-count {
+      text-shadow: 0 0 10px rgba(132, 204, 22, 0.85);
+    }
+
+    .station-node-sub {
+      font-size: 0.62rem;
+      font-weight: 600;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.03em;
+      line-height: 1.1;
+      white-space: nowrap;
+    }
+
+    .station-node-title {
+      font-size: 0.65rem;
+      font-weight: 800;
+      color: #ffffff;
+      text-transform: uppercase;
+      letter-spacing: 0.04em;
+      margin-top: 1px;
+      white-space: nowrap;
+      line-height: 1.1;
     }
 
     .station-special:hover .station-node-title,
@@ -1036,35 +1055,6 @@
     .station-potential:hover .station-node-title,
     .station-potential.active .station-node-title {
       color: #d9f99d;
-    }
-
-    .station-node-title {
-      font-size: 0.65rem;
-      font-weight: 700;
-      color: rgba(226, 232, 240, 0.9);
-      text-transform: uppercase;
-      letter-spacing: 0.04em;
-      margin-bottom: 2px;
-      white-space: nowrap;
-      line-height: 1.1;
-    }
-
-    .station-node-count {
-      font-size: 1.35rem;
-      font-weight: 800;
-      color: #ffffff;
-      line-height: 1;
-    }
-
-    .station-node-suffix {
-      font-size: 0.62rem;
-      font-weight: 600;
-      color: rgba(148, 163, 184, 0.9);
-      text-transform: uppercase;
-      letter-spacing: 0.03em;
-      margin-top: 2px;
-      white-space: nowrap;
-      line-height: 1.1;
     }
 
     .orbit-guide-note {
@@ -2422,39 +2412,37 @@
               <line id="beamPotential" class="orbit-beam" x1="190" y1="190" x2="290" y2="310" stroke="url(#beamGradPotential)" stroke-width="3.5" stroke-linecap="round" />
             </svg>
 
-            <!-- Tâm quỹ đạo (Tất cả 23 cảng biển / Center Hub) -->
-            <div class="orbit-center-hub" id="centerHubBtn" title="Tất cả 23 cảng biển">
-              <div class="center-hub-top" id="centerHubTop">Tất cả</div>
-              <div class="center-hub-count" id="centerHubCount">23</div>
-              <div class="center-hub-label" id="centerHubLabel">cảng biển</div>
+            <!-- Tâm quỹ đạo (Tất cả / Center Hub) -->
+            <div class="orbit-center-hub" id="centerHubBtn" title="Tất cả">
+              <span class="center-hub-all-text" id="centerHubTop">Tất cả</span>
             </div>
 
             <!-- Trạm 1: 2 Cảng Biển Đặc Biệt (Top-Left) -->
-            <div class="orbit-station-node station-special active" id="stationSpecial" data-category="special" title="Nhấp xem: 2 cảng biển đặc biệt">
+            <div class="orbit-station-node station-special active" id="stationSpecial" data-category="special" title="2 cảng biển đặc biệt">
+              <div class="station-node-count">2</div>
+              <div class="station-node-sub">cảng biển</div>
               <div class="station-node-title">ĐẶC BIỆT</div>
-              <div class="station-node-count" style="color: #fb923c;">2</div>
-              <div class="station-node-suffix">cảng biển</div>
             </div>
 
             <!-- Trạm 2: 15 Cảng Biển Loại I (Top-Right) -->
-            <div class="orbit-station-node station-class1" id="stationClass1" data-category="class1" title="Nhấp xem: 15 cảng biển loại I">
+            <div class="orbit-station-node station-class1" id="stationClass1" data-category="class1" title="15 cảng biển loại I">
+              <div class="station-node-count">15</div>
+              <div class="station-node-sub">cảng biển</div>
               <div class="station-node-title">LOẠI I</div>
-              <div class="station-node-count" style="color: #60a5fa;">15</div>
-              <div class="station-node-suffix">cảng biển</div>
             </div>
 
             <!-- Trạm 3: 6 Cảng Biển Loại II (Bottom-Left) -->
-            <div class="orbit-station-node station-class2" id="stationClass2" data-category="class2" title="Nhấp xem: 6 cảng biển loại II">
+            <div class="orbit-station-node station-class2" id="stationClass2" data-category="class2" title="6 cảng biển loại II">
+              <div class="station-node-count">6</div>
+              <div class="station-node-sub">cảng biển</div>
               <div class="station-node-title">LOẠI II</div>
-              <div class="station-node-count" style="color: #fb7185;">6</div>
-              <div class="station-node-suffix">cảng biển</div>
             </div>
 
             <!-- Trạm 4: 4 Cảng Tiềm Năng Đặc Biệt (Bottom-Right) -->
-            <div class="orbit-station-node station-potential" id="stationPotential" data-category="potential" title="Nhấp xem: 4 cảng quy hoạch tiềm năng">
+            <div class="orbit-station-node station-potential" id="stationPotential" data-category="potential" title="4 cảng quy hoạch tiềm năng">
+              <div class="station-node-count">4</div>
+              <div class="station-node-sub">quy hoạch</div>
               <div class="station-node-title">TIỀM NĂNG</div>
-              <div class="station-node-count" style="color: #a3e635;">4</div>
-              <div class="station-node-suffix">cảng biển</div>
             </div>
           </div>
         </div>
@@ -2827,8 +2815,6 @@
       const allList = document.getElementById('allCategoriesList');
       const centerHubBtn = document.getElementById('centerHubBtn');
       const centerHubTop = document.getElementById('centerHubTop');
-      const centerHubCount = document.getElementById('centerHubCount');
-      const centerHubLabel = document.getElementById('centerHubLabel');
       const stationNodes = document.querySelectorAll('.orbit-station-node');
       const col2TabBtns = document.querySelectorAll('.col2-tab-btn');
       const portSearchInput = document.getElementById('portSearchInput');
@@ -2876,8 +2862,8 @@
           }
         });
 
-        // 3. Cột 1: Cập nhật hiển thị tại Tất cả 23 cảng biển (Center Hub)
-        if (centerHubBtn && centerHubCount && centerHubLabel) {
+        // 3. Cột 1: Cập nhật hiển thị tại Tất cả (Center Hub)
+        if (centerHubBtn) {
           if (centerHubFlashTimeout) {
             clearTimeout(centerHubFlashTimeout);
             centerHubFlashTimeout = null;
@@ -2885,8 +2871,6 @@
           }
 
           if (centerHubTop) centerHubTop.textContent = 'Tất cả';
-          centerHubCount.textContent = '23';
-          centerHubLabel.textContent = 'cảng biển';
 
           if (catKey === 'all') {
             centerHubBtn.classList.add('active-hub');
@@ -2966,7 +2950,7 @@
        * Kích hoạt hiệu ứng truyền tín hiệu 2 chiều từ Cảng ở Cột 2 về Tất cả 23 cảng biển (Cột 1)
        */
       function sendPortSignalToCenterHub(portName, catKey) {
-        if (!centerHubBtn || !centerHubCount || !centerHubLabel) return;
+        if (!centerHubBtn) return;
 
         // Cập nhật thông báo Toast ở Cột 2
         if (portToastSync && portToastText) {
@@ -2990,12 +2974,10 @@
           }, 600);
         }
 
-        // Tự động giữ tên chuẩn Tất cả 23 cảng biển
+        // Tự động giữ tên chuẩn Tất cả
         centerHubFlashTimeout = setTimeout(() => {
           centerHubBtn.classList.remove('center-hub-pulse-react');
           if (centerHubTop) centerHubTop.textContent = 'Tất cả';
-          centerHubCount.textContent = '23';
-          centerHubLabel.textContent = 'cảng biển';
         }, 1600);
       }
 
